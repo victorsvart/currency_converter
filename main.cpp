@@ -28,6 +28,17 @@
 //*********************************************************
 
 #include <iostream>
+#include <cstdlib>
+
+void clear_screen()
+{
+#ifdef _WIN32
+    std::system("cls");
+#else
+    // Assume POSIX
+    std::system("clear");
+#endif
+}
 
 void showMenu()
 {
@@ -59,7 +70,7 @@ int main()
             std::cin >> currency_convertion;
             if (currency_convertion == 1)
             {
-                system("clear");
+                clear_screen();
                 const double USD_to_BRL(5.17);
                 std::cout << "You chose to convert USD to BRL. Press enter to continue..." << std::endl;
                 std::cin.ignore();
@@ -73,7 +84,7 @@ int main()
             }
             else if (currency_convertion == 2)
             {
-                system("clear");
+                clear_screen();
                 const double USD_to_EUR{0.98};
                 std::cout << "You chose to convert USD to EUR. Press enter to continue..." << std::endl;
                 std::cin.ignore();
@@ -87,7 +98,7 @@ int main()
             }
             else if (currency_convertion == 3)
             {
-                system("clear");
+                clear_screen();
                 const double USD_to_JPY{137.27};
                 std::cout << "You chose to convert USD to JPY. Press enter to continue..." << std::endl;
                 std::cin.ignore();
@@ -112,7 +123,7 @@ int main()
             std::cin >> currency_convertion;
             if (currency_convertion == 1)
             {
-                system("clear");
+                clear_screen();
                 const double BRL_to_USD(0.19);
                 std::cout << "You chose to convert BRL to USD. Press enter to continue..." << std::endl;
                 std::cin.ignore();
@@ -126,7 +137,7 @@ int main()
             }
             else if (currency_convertion == 2)
             {
-                system("clear");
+                clear_screen();
                 const double BRL_to_EUR{0.19};
                 std::cout << "You chose to convert BRL to EUR. Press enter to continue..." << std::endl;
                 std::cin.ignore();
@@ -140,7 +151,7 @@ int main()
             }
             else if (currency_convertion == 3)
             {
-                system("clear");
+                clear_screen();
                 const double BRL_to_JPY{26.56};
                 std::cout << "You chose to convert BRL to JPY. Press enter to continue..." << std::endl;
                 std::cin.ignore();
@@ -165,7 +176,7 @@ int main()
             std::cin >> currency_convertion;
             if (currency_convertion == 1)
             {
-                system("clear");
+                clear_screen();
                 const double EUR_to_USD(0.98);
                 std::cout << "You chose to convert EUR to USD. Press enter to continue..." << std::endl;
                 std::cin.ignore();
@@ -179,7 +190,7 @@ int main()
             }
             else if (currency_convertion == 2)
             {
-                system("clear");
+                clear_screen();
                 const double EUR_to_BRL{5.19};
                 std::cout << "You chose to convert EUR to BRL. Press enter to continue..." << std::endl;
                 std::cin.ignore();
@@ -193,7 +204,7 @@ int main()
             }
             else if (currency_convertion == 3)
             {
-                system("clear");
+                clear_screen();
                 const double EUR_to_JPY{137.81};
                 std::cout << "You chose to convert EUR to JPY. Press enter to continue..." << std::endl;
                 std::cin.ignore();
@@ -218,7 +229,7 @@ int main()
             std::cin >> currency_convertion;
             if (currency_convertion == 1)
             {
-                system("clear");
+                clear_screen();
                 const double JPY_to_USD(0.0073);
                 std::cout << "You chose to convert JPY to USD. Press enter to continue..." << std::endl;
                 std::cin.ignore();
@@ -232,7 +243,7 @@ int main()
             }
             else if (currency_convertion == 2)
             {
-                system("clear");
+                clear_screen();
                 const double JPY_to_EUR{0.0073};
                 std::cout << "You chose to convert JPY to EUR. Press enter to continue..." << std::endl;
                 std::cin.ignore();
@@ -246,7 +257,7 @@ int main()
             }
             else if (currency_convertion == 3)
             {
-                system("clear");
+                clear_screen();
                 const double JPY_to_BRL{0.038};
                 std::cout << "You chose to convert JPY to BRL. Press enter to continue..." << std::endl;
                 std::cin.ignore();
